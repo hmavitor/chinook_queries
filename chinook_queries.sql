@@ -1,4 +1,4 @@
-﻿/* consulta utilizada para pergunta 1: Quais os cinco artistas com mais músicas? */
+﻿/* query #1: the five artists with more songs. */
 SELECT
   a.Name Artist,
   COUNT(*) SongsQuantity
@@ -14,7 +14,7 @@ GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
 
-/* consulta utilizada para p2: Qual a duração média das músicas de cada gênero? */
+/* query #2: the average song duration per genre. */
 SELECT
   g.Name Genre,
   ROUND(AVG(t.Milliseconds) * 1.66667E-5, 2) Minutes
@@ -27,7 +27,7 @@ WHERE m.Name != 'Protected MPEG-4 video file'
 GROUP BY 1
 ORDER BY 2;
 
-/* consulta utilizada p3: Quanto gastaram os melhores clientes de cada país? */
+/* query #3: the amount spend by best customers per country */
 SELECT
   Country,
   FirstName,
@@ -46,7 +46,7 @@ GROUP BY 1) sub
 GROUP BY 1
 ORDER BY 4 DESC;
 
-/* consulta utilizada para p4: Qual gênero mais popular em cada país? */
+/* query #3: the most popular genre per country */
 SELECT
   sub.Country,
   sub.Name,
